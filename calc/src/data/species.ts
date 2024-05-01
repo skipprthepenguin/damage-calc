@@ -425,7 +425,7 @@ const RBY: {[name: string]: SpeciesData} = {
     weightkg: 28,
     nfe: true,
   },
-  Marowak: {types: ['Ground'], bs: {hp: 60, at: 80, df: 110, sp: 45, sl: 50}, weightkg: 45},
+  Marowak: {types: ['Ground'], bs: {hp: 75, at: 90, df: 115, sp: 45, sl: 50}, weightkg: 45},
   Meowth: {
     types: ['Normal'],
     bs: {hp: 40, at: 45, df: 35, sp: 90, sl: 40},
@@ -877,7 +877,7 @@ const GSC_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   Magnemite: {types: ['Electric', 'Steel'], bs: {sa: 95, sd: 55}, gender: 'N'},
   Magneton: {types: ['Electric', 'Steel'], bs: {sa: 120, sd: 70}, gender: 'N'},
   Mankey: {bs: {sa: 35, sd: 45}},
-  Marowak: {bs: {sa: 50, sd: 80}},
+  Marowak: {bs: {sa: 35, sd: 80}},
   Meowth: {bs: {sa: 40, sd: 40}},
   Metapod: {bs: {sa: 25, sd: 25}},
   Mew: {bs: {sa: 100, sd: 100}, gender: 'N'},
