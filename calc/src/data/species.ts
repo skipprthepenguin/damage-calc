@@ -7567,7 +7567,7 @@ const SS_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   },
   Appletun: {
     types: ['Grass', 'Dragon'],
-    bs: {hp: 110, at: 85, df: 95, sa: 11  0, sd: 90, sp: 30},
+    bs: {hp: 110, at: 85, df: 95, sa: 110, sd: 90, sp: 30},
     weightkg: 13,
     abilities: {0: 'Ripen'},
     otherFormes: ['Appletun-Gmax'],
