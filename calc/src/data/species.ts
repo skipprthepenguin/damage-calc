@@ -8231,6 +8231,7 @@ const SS_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     baseSpecies: 'Inteleon',  
   },
   'Inteleon-Mega': {
+    types: ['Water'],
     bs: {hp: 70, at: 105, df: 85, sa: 151, sd: 95, sp: 134},
     weightkg: 0,
     abilities: {0: 'Sniper'},
