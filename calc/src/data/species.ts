@@ -9812,21 +9812,21 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 12,
     abilities: {0: 'Reckless'}
   },
-  Poisnus: {
+  Poisonus: {
     types: ['Poison', 'Flying'],
     bs: {hp: 109, at: 105, df: 80, sa: 115, sd: 90, sp: 81},
     abilities: {0: 'Magic Bounce'},
 		weightkg: 100,
     otherFormes: [
-      'Poisnus-Therian',
+      'Poisonus-Therian',
     ],
   },
-  'Poisnus-Therian': {
+  'Poisonus-Therian': {
     types: ['Poison', 'Flying'],
     bs: {hp: 109, at: 125, df: 90, sa: 85, sd: 80, sp: 91},
     abilities: {0: 'Magic Guard'},
 		weightkg: 100,
-    baseSpecies: 'Poisnus',
+    baseSpecies: 'Poisonus',
   },
   Poltchageist: {
     types: ['Grass', 'Ghost'],
