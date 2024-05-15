@@ -9124,6 +9124,11 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 85,
     abilities: {0: 'Flash Fire'},
   },
+  azeode: {
+    types: ['Psychic', 'Electric'],
+    bs: {hp: 70, at: 75, df:70, sa:110, sd: 73, sp:138},
+    weightkg: 10,
+  },
   Baxcalibur: {
     types: ['Dragon', 'Ice'],
     bs: {hp: 115, at: 145, df: 92, sa: 75, sd: 86, sp: 87},
