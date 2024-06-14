@@ -10200,6 +10200,11 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 5.4,
     abilities: {0: 'Gooey'},
   },
+  azeode: {
+    types: ["Psychic", "Electric"],
+    bs: {hp: 70, at: 75, df:70, sa:110, sd: 73, sp:138},
+    weightkg: 10,
+  }
 };
 
 const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, SV_PATCH, PLA_PATCH);
