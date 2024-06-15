@@ -10200,11 +10200,52 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 5.4,
     abilities: {0: 'Gooey'},
   },
-  azeode: {
+  "Azelf-Electrode": {
     types: ["Psychic", "Electric"],
     bs: {hp: 70, at: 75, df:70, sa:110, sd: 73, sp:138},
     weightkg: 10,
-  }
+  },
+  "Vanilluxe-Jolteon": {
+    types: ["Ice", 'Electric'],
+    bs: {hp: 69, at: 75, df:68, sa:110, sd: 95, sp:113},
+    weightkg: 10,
+  },
+  "Lucario-Zoroak-Hisui": {
+    types: ["Fighting", "Ghost"],
+    bs: {hp: 66, at: 103, df:63, sa:118, sd: 66, sp:103},
+    weightkg: 10,
+  },
+  "Fearow-Urshifu-Single": {
+    types: ["Flying", "Dark"],
+    bs: {hp: 76, at: 116, df:88, sa:61, sd: 60, sp:98},
+    abilities: {0: 'Sniper'},
+    weightkg: 10,
+  },
+  "Pyroar-Regidrago": {
+    types: ["Fire", "Dragon"],
+    bs: {hp: 124, at: 89, df:57, sa:106, sd: 60, sp:88},
+    weightkg: 10,
+  },
+  "Florges-Orthworm": {
+    types: ["Fairy", "Steel"],
+    bs: {hp: 75, at: 78, df:119, sa:94, sd: 121, sp:68},
+    weightkg: 10,
+  },
+  "Alomomola-Muk": {
+    types: ["Water", "Poison"],
+    bs: {hp: 145, at: 95, df:76, sa:48, sd: 63, sp:55},
+    weightkg: 10,
+  },
+  "Oinkologne-Lurantis": {
+    types: ["Normal", "Grass"],
+    bs: {hp: 96, at: 103, df:85, sa:66, sd: 83, sp:51},
+    weightkg: 10,
+  },
+  "Noctowl-Camerupt": {
+    types: ["Flying", "Ground"],
+    bs: {hp: 90, at: 83, df:63, sa:92, sd: 89, sp:50},
+    weightkg: 10,
+  },
 };
 
 const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, SV_PATCH, PLA_PATCH);
