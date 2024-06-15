@@ -10246,6 +10246,81 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     bs: {hp: 90, at: 83, df:63, sa:92, sd: 89, sp:50},
     weightkg: 10,
   },
+  "Hawlucha-Tauros-Paldea-Blaze": {
+    types: ["Fighting", "Fire"],
+    bs: {hp: 77, at: 104, df:95, sa:59, sd: 65, sp:106},
+    weightkg: 10,
+  },
+  "Landorus-Therian-Charizard": {
+    types: ["Ground", "Flying"],
+    bs: {hp: 85, at: 104, df:82, sa:106, sd: 81, sp:97},
+    weightkg: 10,
+  },
+  "Sylveon-Flygon": {
+    types: ["Fairy", "Dragon"],
+    bs: {hp: 90, at: 88, df:75, sa:100, sd: 113, sp:86},
+    weightkg: 10,
+  },
+  "Houndstone-Scizor": {
+    types: ["Ghost", "Steel"],
+    bs: {hp: 71, at: 120, df:100, sa:51, sd: 91, sp:66},
+    weightkg: 10,
+  },
+  "Armaldo-Cacturne": {
+    types: ["Rock", "Dark"],
+    bs: {hp: 73, at: 118, df:73, sa:85, sd: 73, sp:51},
+    weightkg: 10,
+  },
+  "Arboliva-Swalot": {
+    types: ["Grass", "Poison"],
+    bs: {hp: 85, at: 71, df:85, sa:107, sd: 100, sp:49},
+    weightkg: 10,
+  },
+  "Wigglytuff-Gorebyss": {
+    types: ["Normal", "Water"],
+    bs: {hp: 111, at: 79, df:85, sa:94, sd: 58, sp:49},
+    weightkg: 10,
+  },
+  "Pinsir-Roaring Moon": {
+    types: ["Bug", "Dark"],
+    bs: {hp: 78, at: 134, df:80, sa:55, sd: 80, sp:107},
+    weightkg: 10,
+  },
+  "Simisage-Raboot": {
+    types: ["Grass", "Fire"],
+    bs: {hp: 71, at: 90, df:61, sa:83, sd: 62, sp:96},
+    weightkg: 10,
+  },
+  "Toedscruel-Passimian": {
+    types: ["Ground", "Fighting"],
+    bs: {hp: 86, at: 103, df:81, sa:66, sd: 100, sp:86},
+    weightkg: 10,
+  },
+  "Beartic-Ceruledge": {
+    types: ["Ice", "Ghost"],
+    bs: {hp: 88, at: 126, df:80, sa:66, sd: 86, sp:73},
+    weightkg: 10,
+  },
+  "Raichu-Ursaluna": {
+    types: ["Electric", "Normal"],
+    bs: {hp: 83, at: 123, df:88, sa:75, sd: 80, sp:70},
+    weightkg: 10,
+  },
+  "Gholdengo-Vespiquen": {
+    types: ["Steel", "Flying"],
+    bs: {hp: 81, at: 73, df:99, sa:115, sd: 94, sp:54},
+    weightkg: 10,
+  },
+  "Slowking-Galar-Omaster": {
+    types: ["Poison", "Water"],
+    bs: {hp: 86, at: 61, df:110, sa:111, sd: 96, sp:46},
+    weightkg: 10,
+  },
+  "Hatterene-Exeggutor-Alola": {
+    types: ["Psychic", "Dragon"],
+    bs: {hp: 69, at: 100, df:88, sa:132, sd: 93, sp:39},
+    weightkg: 10,
+  },
 };
 
 const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, SV_PATCH, PLA_PATCH);
