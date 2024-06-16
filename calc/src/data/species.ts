@@ -10509,7 +10509,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     types: ["Steel", "Fairy"],
     bs: {hp: 63, at: 83, df:115, sa:69, sd: 104, sp:74},
     weightkg: 10,
-    abilities: {0: 'Well Baked Body'}
+    abilities: {0: 'Well-Baked Body'}
   },
   "Munkidori-Serperior": {
     types: ["Poison", "Grass"],
