@@ -10660,7 +10660,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   },
   "Rotom-Heat-Uxie": {
     types: ["Electric", "Psychic"],
-    bs: {hp: 78, at: 111, df:73, sa:70, sd: 60, sp: 113},
+    bs: {hp: 58, at: 71, df:122, sa:95, sd: 114, sp: 92},
     weightkg: 10,
   },
   "Machoke-Stonjourner": {
