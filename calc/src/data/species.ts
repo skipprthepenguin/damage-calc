@@ -10745,7 +10745,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     types: ["Water", "Grass"],
     bs: {hp: 86, at: 94, df:116, sa:93, sd: 86, sp: 59},
     weightkg: 10,
-    abilities: {0: 'Torrent'}
+    abilities: {0: 'Regenerator'}
   },
   "Florges-Arboliva": {
     types: ["Fairy", "Normal"],
