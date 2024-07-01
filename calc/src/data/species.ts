@@ -10364,7 +10364,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     types: ["Dark", "Poison"],
     bs: {hp: 85, at: 81, df:116, sa:68, sd: 110, sp:61},
     weightkg: 10,
-    abilities: {0: 'Leviate'}
+    abilities: {0: 'Levitate'}
   },
   "Arcanine-Golem-Alola": {
     types: ["Fire", "Electric"],
