@@ -140,6 +140,7 @@ const DPP = ADV.concat([
 const BW = DPP.concat([
   'Analytic',
   'Big Pecks',
+  'Bug out',
   'Contrary',
   'Cursed Body',
   'Defeatist',
@@ -318,6 +319,7 @@ const SV = SS.concat([
   'Hadron Engine',
   'Hail The Coin',
   'Hammer Down',
+  'Haunted Light',
   'Hospitality',
   'Lava Surfer',
   'Leg Day',
@@ -345,6 +347,7 @@ const SV = SS.concat([
   'Thermal Exchange',
   'Toxic Chain',
   'Toxic Debris',
+  'Vampire',
   'Vengeful Desire',
   'Vessel of Ruin',
   'Well-Baked Body',
