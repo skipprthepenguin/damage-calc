@@ -1166,10 +1166,17 @@ export function calculateBPModsSMSSSV(
     bpMods.push(4915);
   }
 
-  if ((attacker.hasAbility('Reckless') && (move.recoil || move.hasCrashDamage)) ||
-      (attacker.hasAbility('Iron Fist') && move.flags.punch)
+  if ((attacker.hasAbility('Reckless') && (move.recoil || move.hasCrashDamage))
   ) {
     bpMods.push(4915);
+    desc.attackerAbility = attacker.ability;
+  }
+  if ((attacker.hasAbility('Iron Fist') && move.flags.punch || attacker.hasAbility('Leg Day') && move.flags.kick 
+  || attacker.hasAbility('Hammer Down') && move.flags.hammer || attacker.hasAbility('Baller') && move.flags.bullet 
+  || attacker.hasAbility('Heavy Metal') && move.flags.weight || attacker.hasAbility('Illuminate') && move.flags.light
+   || attacker.hasAbility('Quick Draw') && move.flags.blast)
+  ) {
+    bpMods.push(5325);
     desc.attackerAbility = attacker.ability;
   }
 
