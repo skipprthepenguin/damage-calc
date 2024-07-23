@@ -266,10 +266,6 @@ export function calculateSMSSSV(
       type = 'Fire';
     } else if (attacker.name.includes('Ogerpon-Wellspring')) {
       type = 'Water';
-    } else if (move.named('Resentful Screech')) {
-    if (attacker.name.includes('Wishiwashi-Resentful')) {
-      move.bp = 100;
-    }
   }
 }
 
@@ -781,6 +777,10 @@ export function calculateBasePowerSMSSSV(
     break;
   case 'Smite Path': 
     basePower = move.bp * (defender.hasStatus('par') ? 2 : 1);
+    desc.moveBP = basePower;
+    break;
+  case 'Resentful Screech': 
+    basePower = move.bp * (attacker.name==('Wishwashi-Resentful') ? 2 : 1);
     desc.moveBP = basePower;
     break;
   case 'Heavy Slam':
