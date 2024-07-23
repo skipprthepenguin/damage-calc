@@ -266,11 +266,12 @@ export function calculateSMSSSV(
       type = 'Fire';
     } else if (attacker.name.includes('Ogerpon-Wellspring')) {
       type = 'Water';
-    }
-  } else if (move.named('Resentful Screech')) {
+    } else if (move.named('Resentful Screech')) {
     if (attacker.name.includes('Wishiwashi-Resentful')) {
       move.bp = 100;
+    }
   }
+}
 
   let hasAteAbilityTypeChange = false;
   let isAerilate = false;
@@ -1303,7 +1304,7 @@ export function calculateAttackSMSSSV(
   }
 
   // unlike all other attack modifiers, Hustle gets applied directly
-  if (attacker.hasAbility('Hustle') && move.category === 'Physical' && move.) {
+  if (attacker.hasAbility('Hustle') && move.category === 'Physical') {
     attack = pokeRound((attack * 3) / 2);
     desc.attackerAbility = attacker.ability;
   }
