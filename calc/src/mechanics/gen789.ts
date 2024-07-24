@@ -1111,7 +1111,8 @@ export function calculateBPModsSMSSSV(
     (attacker.hasAbility('Mega Launcher') && move.flags.pulse) ||
     (attacker.hasAbility('Strong Jaw') && move.flags.bite) ||
     (attacker.hasAbility('Steely Spirit') && move.hasType('Steel')) ||
-    (attacker.hasAbility('Sharpness') || attacker.hasAbility('Sharpened Leek')  && move.flags.slicing)
+    (attacker.hasAbility('Sharpness')  && move.flags.slicing)
+    || (attacker.hasAbility('Sharpened Leek')  && move.flags.slicing)
   ) {
     bpMods.push(6144);
     desc.attackerAbility = attacker.ability;
