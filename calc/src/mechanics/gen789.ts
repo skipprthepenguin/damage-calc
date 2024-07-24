@@ -779,10 +779,6 @@ export function calculateBasePowerSMSSSV(
     basePower = move.bp * (defender.hasStatus('par') ? 2 : 1);
     desc.moveBP = basePower;
     break;
-  case 'Resentful Screech': 
-    basePower = move.bp * (attacker.name==('Wishwashi-Resentful') ? 2 : 1);
-    desc.moveBP = basePower;
-    break;
   case 'Heavy Slam':
   case 'Heat Crash':
     const wr =

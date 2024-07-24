@@ -66,7 +66,7 @@ const RBY: {[name: string]: MoveData} = {
   Bubble: {bp: 20, type: 'Water'},
   'Bubble Beam': {bp: 65, type: 'Water'},
   Clamp: {bp: 35, type: 'Water'},
-  'Comet Punch': {bp: 18, type: 'Bug', multihit: [4],makesContact: true, willCrit: true,isPunch: true,},
+  'Comet Punch': {bp: 18, type: 'Bug', multihit: 4,makesContact: true, willCrit: true,isPunch: true,},
   Constrict: {bp: 10, type: 'Normal'},
   Conversion: {bp: 0, category: 'Status', type: 'Normal'},
   Counter: {bp: 1, type: 'Fighting'},
@@ -4788,7 +4788,7 @@ const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     maxPower: 140,
   },
   'Resentful Screech': {
-    bp: 50,
+    bp: 100,
     type: 'Ghost',
     category: 'Special',
   },
