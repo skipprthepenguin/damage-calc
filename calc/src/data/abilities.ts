@@ -335,7 +335,7 @@ const SV = SS.concat([
   'Quark Drive',
   'Rocky Payload',
   'Seed Sower',
-  'Sharpned Leek',
+  'Sharpened Leek',
   'Sharpness',
   'Supersweet Syrup',
   'Supreme Overlord',
