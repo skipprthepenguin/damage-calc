@@ -10256,7 +10256,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     bs: {hp: 95, at: 154, df: 118, sa: 99, sd: 111, sp: 58},
 		weightkg: 167,
     abilities: {0: 'Pallesthesia'},
-    baseSpecies: 'Ampharos',
+    baseSpecies: 'Pangoro',
   },
   'Meowth-Mega': {
     types: ['Normal', 'Psychic'],
