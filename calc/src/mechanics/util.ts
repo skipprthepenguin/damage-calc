@@ -148,7 +148,7 @@ export function getMoveEffectiveness(
     return 2;
   }  else if (move.named('Synchronoise') && type === 'Psychic') {
     return 2;
-  }  else if (move.named('Cut') && type === 'Grass' || type === 'Bug') {
+  }  else if (move.named('Cut') && type === 'Grass' || move.named('Cut') && type === 'Bug') {
     return 2;
   } else if (move.named('Flying Press')) {
     return (
