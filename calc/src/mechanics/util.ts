@@ -251,7 +251,7 @@ export function checkUnnerve(gen: Generation, source: Pokemon, target: Pokemon) 
 export function checkPetrifyingGaze(gen: Generation, source: Pokemon, target: Pokemon) {
   const blocked =
     target.hasAbility('Clear Body', 'Full Metal Body') || target.hasItem('Clear Amulet');
-  if (source.hasAbility('Unnerve') && source.abilityOn && !blocked) {
+  if (source.hasAbility('Petrifying Gaze') && source.abilityOn && !blocked) {
     if (target.hasAbility('Contrary')) {
       target.boosts.spe = Math.min(6, target.boosts.spe + 1);
     } else if (target.hasAbility('Simple')) {
