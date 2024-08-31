@@ -372,6 +372,10 @@ function calculateFinalModsADV(
     baseDamage = Math.floor(baseDamage / 2);
     desc.isBurned = true;
   }
+  if (attacker.hasStatus('frb')) {
+    baseDamage = Math.floor(baseDamage / 2);
+    desc.isFrostbited = true;
+  }
 
   if (!isCritical) {
     const screenMultiplier = field.gameType !== 'Singles' ? 2 / 3 : 1 / 2;

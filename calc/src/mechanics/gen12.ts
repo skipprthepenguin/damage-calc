@@ -146,6 +146,10 @@ export function calculateRBYGSC(
       at = Math.floor(at / 2);
       desc.isBurned = true;
     }
+    if (attacker.hasStatus('frb')) {
+      at = Math.floor(at / 2);
+      desc.isFrostbited = true;
+    }
   }
 
   if (move.named('Explosion', 'Self-Destruct')) {

@@ -203,6 +203,10 @@ export function calculateDPP(
     baseDamage = Math.floor(baseDamage * 0.5);
     desc.isBurned = true;
   }
+  if (attacker.hasStatus('frb')) {
+    baseDamage = Math.floor(baseDamage * 0.5);
+    desc.isFrostbited = true;
+  }
 
   baseDamage = calculateFinalModsDPP(baseDamage, attacker, move, field, desc, isCritical);
 
@@ -280,6 +284,10 @@ export function calculateDPP(
       if (attacker.hasStatus('brn') && isPhysical && !attacker.hasAbility('Guts')) {
         baseDamage = Math.floor(baseDamage * 0.5);
         desc.isBurned = true;
+      }
+      if (attacker.hasStatus('frb')) {
+        baseDamage = Math.floor(baseDamage * 0.5);
+        desc.isFrostbited = true;
       }
       baseDamage = calculateFinalModsDPP(baseDamage, attacker, move, field, desc, isCritical);
 
