@@ -1044,6 +1044,13 @@ const DPP_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     makesContact: true,
     category: 'Physical',
   },
+  'Aquatic Kick': {
+    bp: 90,
+    type: 'Water',
+    makesContact: true,
+    category: 'Physical',
+    iskick: true
+  },
   'Attack Order': {bp: 90, type: 'Bug', category: 'Physical'},
   Brine: {bp: 65, type: 'Water', category: 'Special'},
   'Bullet Punch': {
@@ -4418,8 +4425,8 @@ const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
   'Dragon Cheer': {bp: 0, type: 'Dragon'},
   'Ecliptic Punishment': {
     bp: 110,
-    type: 'Dark',
-    category: 'Physical',
+    type: 'Psychic',
+    category: 'Special',
   },
   'Electro Drift': {
     bp: 100,
@@ -4524,11 +4531,11 @@ const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     maxPower: 130,
   },
   'Hyper Drill': {
-    bp: 100,
+    bp: 90,
     type: 'Normal',
     category: 'Physical',
-    zp: 180,
-    maxPower: 130,
+    zp: 170,
+    maxPower: 120,
     makesContact: true,
     breaksProtect: true,
   },

@@ -36,6 +36,7 @@ export interface RawDesc {
   isCritical?: boolean;
   isLightScreen?: boolean;
   isBurned?: boolean;
+  isFrostbited?: boolean;
   isProtected?: boolean;
   isReflect?: boolean;
   isBattery?: boolean;
@@ -127,6 +128,13 @@ export function getRecovery(
 
   if (move.named('G-Max Finale')) {
     recovery[0] = recovery[1] = Math.round(attacker.maxHP() / 6);
+  }
+
+  if (attacker.hasAbility('Vampire') && move.flags.bite) {
+    for (var i = 0; i < minD.length; i++) {
+        recovery[0] += Math.round(minD[i] * move.hits / 5);
+        recovery[1] += Math.round(maxD[i] * move.hits / 5);
+    }
   }
 
   if (move.drain) {
@@ -831,6 +839,9 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
   output = appendIfSet(output, description.rivalry);
   if (description.isBurned) {
     output += 'burned ';
+  }
+  if (description.isFrostbited) {
+    output += 'Frostbite ';
   }
   if (description.alliesFainted) {
     output += Math.min(5, description.alliesFainted) +

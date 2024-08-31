@@ -231,6 +231,43 @@ export function checkIntimidate(gen: Generation, source: Pokemon, target: Pokemo
   }
 }
 
+export function checkUnnerve(gen: Generation, source: Pokemon, target: Pokemon) {
+  const blocked =
+    target.hasAbility('Clear Body', 'Full Metal Body') || target.hasItem('Clear Amulet');
+  if (source.hasAbility('Unnerve') && source.abilityOn && !blocked) {
+    if (target.hasAbility('Contrary', 'Competitive')) {
+      target.boosts.spa = Math.min(6, target.boosts.spa + 1);
+    } else if (target.hasAbility('Simple')) {
+      target.boosts.spa = Math.max(-6, target.boosts.spa - 2);
+    } else {
+      target.boosts.spa = Math.max(-6, target.boosts.spa - 1);
+    }
+    if (target.hasAbility('Defiant')) {
+      target.boosts.atk = Math.min(6, target.boosts.atk + 2);
+    }
+  }
+}
+
+export function checkPetrifyingGaze(gen: Generation, source: Pokemon, target: Pokemon) {
+  const blocked =
+    target.hasAbility('Clear Body', 'Full Metal Body') || target.hasItem('Clear Amulet');
+  if (source.hasAbility('Unnerve') && source.abilityOn && !blocked) {
+    if (target.hasAbility('Contrary')) {
+      target.boosts.spe = Math.min(6, target.boosts.spe + 1);
+    } else if (target.hasAbility('Simple')) {
+      target.boosts.spe = Math.max(-6, target.boosts.spe - 2);
+    } else {
+      target.boosts.spe = Math.max(-6, target.boosts.spe - 1);
+    }
+    if (target.hasAbility('Defiant')) {
+      target.boosts.atk = Math.min(6, target.boosts.atk + 2);
+    }
+    if (target.hasAbility('Competitive')) {
+      target.boosts.spa = Math.min(6, target.boosts.spa + 2);
+    }
+  }
+}
+
 export function checkDownload(source: Pokemon, target: Pokemon, wonderRoomActive?: boolean) {
   if (source.hasAbility('Download')) {
     let def = target.stats.def;
@@ -527,6 +564,7 @@ export function getFinalDamage(
   i: number,
   effectiveness: number,
   isBurned: boolean,
+  isFrostbited: boolean,
   stabMod: number,
   finalMod: number,
   protect?: boolean
@@ -538,6 +576,7 @@ export function getFinalDamage(
   damageAmount = Math.floor(OF32(pokeRound(damageAmount) * effectiveness));
 
   if (isBurned) damageAmount = Math.floor(damageAmount / 2);
+  if (isFrostbited) damageAmount = Math.floor(damageAmount / 2);
   if (protect) damageAmount = pokeRound(OF32(damageAmount * 1024) / 4096);
   return OF16(pokeRound(Math.max(1, OF32(damageAmount * finalMod) / 4096)));
 }
