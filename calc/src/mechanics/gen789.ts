@@ -588,7 +588,7 @@ export function calculateSMSSSV(
   const applyFrostbite =
     attacker.hasStatus('frb') &&
     move.category === 'Special';
-  desc.isFrostbited = applyFrostbite;
+  desc.isFrostbitten = applyFrostbite;
   const finalMods = calculateFinalModsSMSSSV(
     gen,
     attacker,

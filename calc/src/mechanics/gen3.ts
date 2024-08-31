@@ -374,7 +374,7 @@ function calculateFinalModsADV(
   }
   if (attacker.hasStatus('frb')) {
     baseDamage = Math.floor(baseDamage / 2);
-    desc.isFrostbited = true;
+    desc.isFrostbitten = true;
   }
 
   if (!isCritical) {

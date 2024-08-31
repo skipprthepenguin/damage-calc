@@ -564,7 +564,7 @@ export function getFinalDamage(
   i: number,
   effectiveness: number,
   isBurned: boolean,
-  isFrostbited: boolean,
+  isFrostbitten: boolean,
   stabMod: number,
   finalMod: number,
   protect?: boolean
@@ -576,7 +576,7 @@ export function getFinalDamage(
   damageAmount = Math.floor(OF32(pokeRound(damageAmount) * effectiveness));
 
   if (isBurned) damageAmount = Math.floor(damageAmount / 2);
-  if (isFrostbited) damageAmount = Math.floor(damageAmount / 2);
+  if (isFrostbitten) damageAmount = Math.floor(damageAmount / 2);
   if (protect) damageAmount = pokeRound(OF32(damageAmount * 1024) / 4096);
   return OF16(pokeRound(Math.max(1, OF32(damageAmount * finalMod) / 4096)));
 }

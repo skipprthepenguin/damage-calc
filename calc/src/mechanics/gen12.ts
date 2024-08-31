@@ -148,7 +148,7 @@ export function calculateRBYGSC(
     }
     if (attacker.hasStatus('frb')) {
       at = Math.floor(at / 2);
-      desc.isFrostbited = true;
+      desc.isFrostbitten = true;
     }
   }
 

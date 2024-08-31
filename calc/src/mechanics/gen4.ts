@@ -205,7 +205,7 @@ export function calculateDPP(
   }
   if (attacker.hasStatus('frb')) {
     baseDamage = Math.floor(baseDamage * 0.5);
-    desc.isFrostbited = true;
+    desc.isFrostbitten = true;
   }
 
   baseDamage = calculateFinalModsDPP(baseDamage, attacker, move, field, desc, isCritical);
@@ -287,7 +287,7 @@ export function calculateDPP(
       }
       if (attacker.hasStatus('frb')) {
         baseDamage = Math.floor(baseDamage * 0.5);
-        desc.isFrostbited = true;
+        desc.isFrostbitten = true;
       }
       baseDamage = calculateFinalModsDPP(baseDamage, attacker, move, field, desc, isCritical);
 

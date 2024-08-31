@@ -314,7 +314,7 @@ export function calculateBWXY(
 
   const applyFrostbite =
     attacker.hasStatus('frb');
-  desc.isFrostbited = applyFrostbite;
+  desc.isFrostbitten = applyFrostbite;
 
   const finalMods = calculateFinalModsBWXY(
     gen,
