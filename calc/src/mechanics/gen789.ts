@@ -26,6 +26,8 @@ import {
   checkIntrepidSword,
   checkItem,
   checkMultihitBoost,
+  checkPetrifyingGaze,
+  checkUnnerve,
   checkSeedBoost,
   checkTeraformZero,
   checkWindRider,
@@ -83,6 +85,10 @@ export function calculateSMSSSV(
   checkDownload(defender, attacker, field.isWonderRoom);
   checkIntrepidSword(attacker, gen);
   checkIntrepidSword(defender, gen);
+  checkPetrifyingGaze(gen, attacker, defender);
+  checkPetrifyingGaze(gen, defender, attacker);
+  checkUnnerve(gen, attacker, defender);
+  checkUnnerve(gen, defender, attacker);
 
   checkWindRider(attacker, field.attackerSide);
   checkWindRider(defender, field.defenderSide);
@@ -420,6 +426,7 @@ export function calculateSMSSSV(
 
   if ((defender.hasAbility('Wonder Guard') && typeEffectiveness <= 1) ||
       (move.hasType('Grass') && defender.hasAbility('Sap Sipper')) ||
+      (move.hasType('Fairy') && defender.hasAbility('Sweet Tooth')) ||
       (move.hasType('Fire') && defender.hasAbility('Flash Fire', 'Well-Baked Body')) ||
       (move.hasType('Water') && defender.hasAbility('Dry Skin', 'Storm Drain', 'Water Absorb')) ||
       (move.hasType('Electric') &&
@@ -578,6 +585,10 @@ export function calculateSMSSSV(
     !attacker.hasAbility('Guts') &&
     !move.named('Facade');
   desc.isBurned = applyBurn;
+  const applyFrostbite =
+    attacker.hasStatus('frb') &&
+    move.category === 'Special';
+  desc.isFrostbited = applyFrostbite;
   const finalMods = calculateFinalModsSMSSSV(
     gen,
     attacker,
