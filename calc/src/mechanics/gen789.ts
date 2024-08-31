@@ -430,7 +430,7 @@ export function calculateSMSSSV(
       (move.hasType('Fire') && defender.hasAbility('Flash Fire', 'Well-Baked Body')) ||
       (move.hasType('Water') && defender.hasAbility('Dry Skin', 'Storm Drain', 'Water Absorb')) ||
       (move.hasType('Electric') &&
-        defender.hasAbility('Lightning Rod', 'Motor Drive', 'Volt Absorb')) || 
+        defender.hasAbility('Lightning Rod', 'Motor Drive', 'Volt Absorb')) ||
       (move.hasType('Ground') &&
         !field.isGravity && !move.named('Thousand Arrows') &&
         !defender.hasItem('Iron Ball') && defender.hasAbility('Levitate')) ||
@@ -584,10 +584,10 @@ export function calculateSMSSSV(
     move.category === 'Physical' &&
     !attacker.hasAbility('Guts') &&
     !move.named('Facade');
+  desc.isBurned = applyBurn;
   const applyFrostbite =
     attacker.hasStatus('frb') &&
     move.category === 'Special';
-  desc.isBurned = applyBurn;
   desc.isFrostbited = applyFrostbite;
   const finalMods = calculateFinalModsSMSSSV(
     gen,
