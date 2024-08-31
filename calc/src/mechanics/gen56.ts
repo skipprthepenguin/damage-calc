@@ -694,7 +694,7 @@ export function calculateBPModsBWXY(
     desc.attackerItem = attacker.item;
   }
 
-  if ((move.named('Facade') && attacker.hasStatus('brn', 'par', 'psn', 'tox')) ||
+  if ((move.named('Facade') && attacker.hasStatus('brn', 'par', 'psn', 'tox', 'frb')) ||
       (move.named('Brine') && defender.curHP() <= defender.maxHP() / 2) ||
       (move.named('Venoshock') && defender.hasStatus('psn', 'tox'))) {
     bpMods.push(8192);

@@ -584,10 +584,10 @@ export function calculateSMSSSV(
     move.category === 'Physical' &&
     !attacker.hasAbility('Guts') &&
     !move.named('Facade');
+  desc.isBurned = applyBurn;
   const applyFrostbite =
     attacker.hasStatus('frb') &&
     move.category === 'Special';
-  desc.isBurned = applyBurn;
   desc.isFrostbited = applyFrostbite;
   const finalMods = calculateFinalModsSMSSSV(
     gen,
@@ -1024,7 +1024,7 @@ export function calculateBPModsSMSSSV(
     resistedKnockOffDamage = !!item.megaEvolves && defender.name.includes(item.megaEvolves);
   }
 
-  if ((move.named('Facade') && attacker.hasStatus('brn', 'par', 'psn', 'tox')) ||
+  if ((move.named('Facade') && attacker.hasStatus('brn', 'par', 'psn', 'tox', 'frb')) ||
     (move.named('Brine') && defender.curHP() <= defender.maxHP() / 2) ||
     (move.named('Venoshock') && defender.hasStatus('psn', 'tox')) ||
     (move.named('Lash Out') && (countBoosts(gen, attacker.boosts) < 0))

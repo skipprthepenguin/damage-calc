@@ -339,7 +339,7 @@ export function calculateBasePowerDPP(
     desc.moveBP = basePower;
     break;
   case 'Facade':
-    if (attacker.hasStatus('par', 'psn', 'tox', 'brn')) {
+    if (attacker.hasStatus('par', 'psn', 'tox', 'brn', 'frb')) {
       basePower = move.bp * 2;
       desc.moveBP = basePower;
     }
