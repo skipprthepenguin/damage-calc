@@ -475,6 +475,7 @@ const SV = SS.concat([
   'Auspicious Armor',
   'Ability Shield',
   'Booster Energy',
+  'Bubbled Dome',
   'Clear Amulet',
   'Cornerstone Mask',
   'Covert Cloak',

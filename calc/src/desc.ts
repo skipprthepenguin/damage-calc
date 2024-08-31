@@ -841,7 +841,7 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
     output += 'burned ';
   }
   if (description.isFrostbitten) {
-    output += 'frostbite ';
+    output += 'Frostbitten ';
   }
   if (description.alliesFainted) {
     output += Math.min(5, description.alliesFainted) +

@@ -1597,7 +1597,7 @@ export function calculateDfModsSMSSSV(
 
   if ((defender.hasItem('Eviolite') &&
       (defender.name === 'Dipplin' || gen.species.get(toID(defender.name))?.nfe)) ||
-      (!hitsPhysical && defender.hasItem('Assault Vest'))) {
+      (!hitsPhysical && defender.hasItem('Assault Vest')) || (hitsPhysical && defender.hasItem('Bubbled Dome'))) {
     dfMods.push(6144);
     desc.defenderItem = defender.item;
   } else if (
