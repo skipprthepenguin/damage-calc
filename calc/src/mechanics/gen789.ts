@@ -1559,10 +1559,14 @@ export function calculateDfModsSMSSSV(
     desc.isFlowerGiftDefender = true;
   } else if (
     defender.hasAbility('Grass Pelt') &&
-    field.hasTerrain('Grassy') &&
-    hitsPhysical
+    field.hasTerrain('Grassy') 
   ) {
     dfMods.push(6144);
+    desc.defenderAbility = defender.ability;
+  } else if (
+    defender.hasAbility('Grass Pelt')
+  ) {
+    dfMods.push(5120);
     desc.defenderAbility = defender.ability;
   } else if (defender.hasAbility('Fur Coat') && hitsPhysical) {
     dfMods.push(8192);

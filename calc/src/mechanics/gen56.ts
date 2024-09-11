@@ -959,7 +959,7 @@ export function calculateDfModsBWXY(
     desc.isFlowerGiftDefender = true;
   }
 
-  if (field.hasTerrain('Grassy') && defender.hasAbility('Grass Pelt') && hitsPhysical) {
+  if (field.hasTerrain('Grassy') && defender.hasAbility('Grass Pelt')) {
     dfMods.push(6144);
     desc.defenderAbility = defender.ability;
   }
