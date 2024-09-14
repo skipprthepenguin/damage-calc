@@ -178,7 +178,7 @@ const RBY: {[name: string]: SpeciesData} = {
     bs: {hp: 55, at: 55, df: 50, sp: 55, sl: 65},
     weightkg: 6.5,
     nfe: true,
-    otherFormes: ['Eevee-Mega'],
+    otherFormes: ['Eevee-Mega', 'Eevee-Gmax', 'Eevee-Starter'],
   },
   Ekans: {
     types: ['Poison'],
@@ -6274,7 +6274,6 @@ const SM_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   Diglett: {otherFormes: ['Diglett-Alola']},
   Dodrio: {bs: {sp: 110}},
   Dugtrio: {bs: {at: 100}, otherFormes: ['Dugtrio-Alola']},
-  Eevee: {otherFormes: ['Eevee-Starter']},
   Electrode: {bs: {sp: 150}},
   Exeggutor: {bs: {sd: 80}, otherFormes: ['Exeggutor-Alola']},
   'Farfetch\u2019d': {bs: {at: 90}},
@@ -7591,7 +7590,6 @@ const SS_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     otherFormes: ['Darmanitan-Galar', 'Darmanitan-Galar-Zen', 'Darmanitan-Zen'],
   },
   Darumaka: {otherFormes: ['Darumaka-Galar']},
-  Eevee: {otherFormes: ['Eevee-Gmax']},
   Equilibra: {bs: {sa: 133}},
   'Farfetch\u2019d': {otherFormes: ['Farfetch\u2019d-Galar', 'Farfetch\u2019d-Mega']},
   Garbodor: {otherFormes: ['Garbodor-Gmax']},
@@ -8841,7 +8839,6 @@ const SS_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 const SS: {[name: string]: SpeciesData} = extend(true, {}, SM, SS_PATCH);
 
 delete SS['Pikachu-Starter'];
-delete SS['Eevee-Starter'];
 
 const PLA_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   Arcanine: {otherFormes: ['Arcanine-Hisui']},
