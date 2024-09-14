@@ -178,6 +178,7 @@ const RBY: {[name: string]: SpeciesData} = {
     bs: {hp: 55, at: 55, df: 50, sp: 55, sl: 65},
     weightkg: 6.5,
     nfe: true,
+    otherFormes: ['Eevee-Mega'],
   },
   Ekans: {
     types: ['Poison'],
