@@ -427,7 +427,7 @@ export function calculateSMSSSV(
   if ((defender.hasAbility('Wonder Guard') && typeEffectiveness <= 1) ||
       (move.hasType('Grass') && defender.hasAbility('Sap Sipper')) ||
       (move.hasType('Fairy') && defender.hasAbility('Sweet Tooth')) ||
-      (move.hasType('Fire') && defender.hasAbility('Flash Fire', 'Well-Baked Body', 'Mighty Fire')) ||
+      (move.hasType('Fire') && defender.hasAbility('Flash Fire', 'Well-Baked Body', 'Mighty Fire', 'Heatproof')) ||
       (move.hasType('Water') && defender.hasAbility('Dry Skin', 'Storm Drain', 'Water Absorb', 'Silent Water')) ||
       (move.hasType('Electric') &&
         defender.hasAbility('Lightning Rod', 'Motor Drive', 'Volt Absorb', 'Radiating Light')) || 
@@ -1245,10 +1245,7 @@ export function calculateBPModsSMSSSV(
     bpMods.push(3687);
   }
 
-  if (gen.num <= 8 && defender.hasAbility('Heatproof') && move.hasType('Fire')) {
-    bpMods.push(0);
-    desc.defenderAbility = defender.ability;
-  } else if (defender.hasAbility('Dry Skin') && move.hasType('Fire')) {
+  if (defender.hasAbility('Dry Skin') && move.hasType('Fire')) {
     bpMods.push(5120);
     desc.defenderAbility = defender.ability;
   }
@@ -1431,10 +1428,6 @@ export function calculateAtModsSMSSSV(
     desc.defenderAbility = defender.ability;
   }
 
-  if (gen.num >= 9 && defender.hasAbility('Heatproof') && move.hasType('Fire')) {
-    atMods.push(0);
-    desc.defenderAbility = defender.ability;
-  }
   // Pokemon with "-of Ruin" Ability are immune to the opposing "-of Ruin" ability
   const isTabletsOfRuinActive = (defender.hasAbility('Tablets of Ruin') || field.isTabletsOfRuin) &&
     !attacker.hasAbility('Tablets of Ruin');
