@@ -1619,7 +1619,9 @@ export function calculateDfModsSMSSSV(
   ) {
     dfMods.push(8192);
     desc.defenderItem = defender.item;
-  }
+  } else if ((defender.hasItem('Armor Plate')))
+    dfMods.push(4915);
+    desc.defenderItem = defender.item;
   return dfMods;
 }
 

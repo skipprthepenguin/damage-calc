@@ -474,6 +474,7 @@ const SV = SS.concat([
   'Adamant Crystal',
   'Auspicious Armor',
   'Ability Shield',
+  'Armor Plate',
   'Booster Energy',
   'Bubbled Dome',
   'Clear Amulet',
