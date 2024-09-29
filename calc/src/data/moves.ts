@@ -2414,7 +2414,7 @@ const SM_PATCH: {[name: string]: DeepPartial<MoveData>} = {
   '10,000,000 Volt Thunderbolt': {bp: 195, type: 'Electric', category: 'Special', isZ: true},
   'Acid Downpour': {bp: 1, type: 'Poison', category: 'Physical', isZ: true},
   'All-Out Pummeling': {bp: 1, type: 'Fighting', category: 'Physical', isZ: true},
-  'Baddy Bad': {bp: 90, type: 'Dark', category: 'Special', zp: 175},
+  'Baddy Bad': {bp: 80, type: 'Dark', category: 'Special', zp: 175},
   'Baneful Bunker': {bp: 0, type: 'Poison', priority: 4},
   'Beak Blast': {
     bp: 100,
@@ -2428,7 +2428,7 @@ const SM_PATCH: {[name: string]: DeepPartial<MoveData>} = {
   'Black Hole Eclipse': {bp: 1, type: 'Dark', category: 'Physical', isZ: true},
   'Bloom Doom': {bp: 1, type: 'Grass', category: 'Physical', isZ: true},
   'Bouncy Bubble': {
-    bp: 90,
+    bp: 60,
     type: 'Water',
     drain: [1, 2],
     category: 'Special',
@@ -2436,7 +2436,7 @@ const SM_PATCH: {[name: string]: DeepPartial<MoveData>} = {
   },
   'Breakneck Blitz': {bp: 1, type: 'Normal', category: 'Physical', isZ: true},
   'Buzzy Buzz': {
-    bp: 90,
+    bp: 60,
     type: 'Electric',
     category: 'Special',
     secondaries: true,
@@ -2495,7 +2495,7 @@ const SM_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     zp: 195,
   },
   'Floral Healing': {bp: 0, type: 'Fairy'},
-  'Freezy Frost': {bp: 90, type: 'Ice', category: 'Special', zp: 175},
+  'Freezy Frost': {bp: 100, type: 'Ice', category: 'Special', zp: 175},
   'Genesis Supernova': {
     bp: 185,
     type: 'Psychic',
@@ -2504,7 +2504,7 @@ const SM_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     isZ: true,
   },
   'Gigavolt Havoc': {bp: 1, type: 'Electric', category: 'Physical', isZ: true},
-  'Glitzy Glow': {bp: 90, type: 'Psychic', category: 'Special', zp: 175},
+  'Glitzy Glow': {bp: 80, type: 'Psychic', category: 'Special', zp: 175},
   'Guardian of Alola': {bp: 0, type: 'Fairy', category: 'Special', isZ: true},
   'Hydro Vortex': {bp: 1, type: 'Water', category: 'Physical', isZ: true},
   'Ice Hammer': {
@@ -2567,7 +2567,7 @@ const SM_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     isZ: true,
   },
   'Revelation Dance': {bp: 90, type: 'Normal', category: 'Special', zp: 175},
-  'Sappy Seed': {bp: 90, type: 'Grass', category: 'Physical', zp: 175},
+  'Sappy Seed': {bp: 100, type: 'Grass', category: 'Physical', zp: 175},
   'Savage Spin-Out': {bp: 1, type: 'Bug', category: 'Physical', isZ: true},
   'Searing Sunraze Smash': {
     bp: 200,
@@ -2587,7 +2587,7 @@ const SM_PATCH: {[name: string]: DeepPartial<MoveData>} = {
   'Shore Up': {bp: 0, type: 'Ground'},
   'Sinister Arrow Raid': {bp: 180, type: 'Ghost', category: 'Physical', isZ: true},
   'Sizzly Slide': {
-    bp: 90,
+    bp: 60,
     type: 'Fire',
     makesContact: true,
     category: 'Physical',
@@ -2608,7 +2608,7 @@ const SM_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     category: 'Physical',
     isZ: true,
   },
-  'Sparkly Swirl': {bp: 90, type: 'Fairy', category: 'Special', zp: 175},
+  'Sparkly Swirl': {bp: 125, type: 'Fairy', category: 'Special', zp: 175},
   'Splintered Stormshards': {bp: 190, type: 'Rock', category: 'Physical', isZ: true},
   Spotlight: {bp: 0, type: 'Normal', priority: 3},
   'Stoked Sparksurfer': {
@@ -3589,9 +3589,8 @@ const SS_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     type: 'Fairy',
     makesContact: true,
     category: 'Physical',
-    secondaries: true,
-    zp: 140,
-    maxPower: 130,
+    zp: 180,
+    maxPower: 140,
   },
   'Steel Beam': {
     bp: 140,
@@ -4168,25 +4167,6 @@ const SS_PATCH: {[name: string]: DeepPartial<MoveData>} = {
 };
 
 const SS: {[name: string]: MoveData} = extend(true, {}, SM, SS_PATCH);
-
-const LGPE_MOVES = [
-  'Baddy Bad',
-  'Bouncy Bubble',
-  'Buzzy Buzz',
-  'Freezy Frost',
-  'Glitzy Glow',
-  'Sappy Seed',
-  'Sizzly Slide',
-  'Sparkly Swirl',
-  'Zippy Zap',
-  'Floaty Fall',
-  'Pika Papow',
-  'Splishy Splash',
-  'Veevee Volley',
-];
-for (const m of LGPE_MOVES) {
-  delete SS[m];
-}
 
 const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
   'Aerial Ace': {isSlicing: true},
