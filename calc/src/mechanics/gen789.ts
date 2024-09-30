@@ -1580,6 +1580,9 @@ export function calculateDfModsSMSSSV(
   } else if (defender.hasAbility('Fur Coat') && hitsPhysical) {
     dfMods.push(8192);
     desc.defenderAbility = defender.ability;
+  } else if (defender.hasAbility('Shell Armor')) {
+    dfMods.push(4916);
+    desc.defenderAbility = defender.ability;
   }
   // Pokemon with "-of Ruin" Ability are immune to the opposing "-of Ruin" ability
   const isSwordOfRuinActive = (attacker.hasAbility('Sword of Ruin') || field.isSwordOfRuin) &&
@@ -1619,7 +1622,7 @@ export function calculateDfModsSMSSSV(
   ) {
     dfMods.push(8192);
     desc.defenderItem = defender.item;
-  } else if ((defender.hasItem('Armor Plate')) || ((defender.hasAbility('Shell Armor'))))
+  } else if ((defender.hasItem('Armor Plate')))
     dfMods.push(4915);
     desc.defenderItem = defender.item;
   return dfMods;
