@@ -3139,6 +3139,7 @@ const DPP_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     bs: {hp: 84, at: 91, df: 88, sa: 116, sd: 106, sp: 60},
     weightkg: 84.5,
     abilities: {0: 'Torrent'},
+    otherFormes: ['Empoleon-Mega'],
   },
   Fidgit: {
     types: ['Poison', 'Ground'],
