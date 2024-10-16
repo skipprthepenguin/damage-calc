@@ -5718,7 +5718,7 @@ const XY_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   'Gourgeist-Mega': {
     types: ["Grass", "Ghost"],
 		gender: "N",
-		bs: {hp: 65, at: 100, df: 122, sa: 133, sd: 105, sp: 54},
+		bs: {hp: 90, at: 100, df: 122, sa: 133, sd: 105, sp: 54},
 		abilities: {0: "Eerie Cry"},
 		weightkg: 12.5,
     baseSpecies: 'Gourgeist'
