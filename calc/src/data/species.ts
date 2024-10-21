@@ -2036,7 +2036,7 @@ const ADV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   },
   'Gardevoir-Olympios': {
     types: ['Ground', 'Fairy'],
-    bs: {hp: 68, at: 65, df: 70, sa: 125, sd: 115, sp: 80},
+    bs: {hp: 68, at: 65, df: 65, sa: 125, sd: 115, sp: 80},
     weightkg: 48.4,
     abilities: {0: 'Competitive'},
     baseSpecies: 'Gardevoir',
